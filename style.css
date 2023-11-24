@@ -1,5 +1,17 @@
+header {
+    text-align: center;
+}
+
+div {
+    text-align: center;
+}
+
+.textfield, .checkbox {
+    margin: 3% 0 5% 0;
+}
+
 label {
-    background-color: black;
+    text-align: left;
 }
 
 
