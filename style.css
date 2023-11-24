@@ -11,10 +11,12 @@ body {
 
 
 .textfield, .checkbox, .myDiv {
-    margin: 15px 0 15px 0;
+    margin: 15px 10px 15px 10px;
 }
 
-
+.myDiv {
+    border: 2px solid black;  
+}
 
 
 
