@@ -6,11 +6,11 @@ const myDiv = document.querySelector(".myDiv");
 
 
 // fördefinerad funktion 
-function getvalue (e) {
+function klickadeBox (e) {
     console.log('checkBox clicked, eventobjekt', e)
 }
 
-checkBox.addEventListener('click', getvalue); {
+checkBox.addEventListener('click', klickadeBox); {
 }; 
 
 
