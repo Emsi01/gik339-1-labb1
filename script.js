@@ -6,27 +6,42 @@ const myDiv = document.querySelector(".myDiv");
 
 // fördefinerad funktion för inputfälten
 function klickadeInput(e) {
-    console.log('Inputfält klickad, eventobjekt', e);
-    const name = e.target.name;
-    const value = e.target.value;
-
-    const html = '<p> Fältet ' + name + ' har värdet ' + value + '</p>';
-
-    myDiv.insertAdjacentHTML('afterbegin', html);
+    console.log(e.target);
+    console.log(e.target.name);
+    if (e.target = textField[1]) {
+        myDiv.innerHTML = textField[1].value
+    }
 }
+
 
 // Iterera över textfält och eventlyssnare för textfälten 
 for (let i = 0; i < textField.length; i++) {
-    textField[i].addEventListener('input', klickadeInput);
+    textField[i].addEventListener('keypress', klickadeInput);
 }
 
 
 
 // Anonym funktion 
-const klickadeBox = function(e) {
-    console.log('checkBox clicked, eventobjekt', e)
+const klickadeBox = function() {
+    console.log('checkBox clicked, eventobjekt')
+    myDiv.style.backgroundColor = textField[0].value;
+    myButton[0].style.backgroundColor = textField[0].value;
+    
 }
+
+
 // eventlyssnare för checkBox 
-checkBox.addEventListener('click', klickadeBox); {
+checkBox.addEventListener('change', klickadeBox); {
 }; 
+
+// Anonym funktion
+const klickadeKnapp = function() {
+    console.log('myButton clicked, eventobjekt')
+    myDiv.remove();
+}
+
+
+// eventlyssnare till knappen
+myButton[0].addEventListener('click', klickadeKnapp); {
+};
 
